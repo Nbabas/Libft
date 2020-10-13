@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 15:49:36 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 15:57:15 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/10/13 14:22:18 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*pdest;
 	unsigned char	*psrc;
 
+	if (!dest && !src)
+		return (0);
+	if (dest == src)
+		return (dest);
 	if (dest < src)
 		return (ft_memcpy(dest, src, n));
-	
 	pdest = (unsigned char *)dest;
 	psrc = (unsigned char *)src;
 	while (n)

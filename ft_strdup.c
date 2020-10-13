@@ -6,14 +6,11 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:50:47 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 13:57:40 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/10/12 18:41:24 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
 #include "libft.h"
-
 
 char *ft_strdup(const char *s)
 {

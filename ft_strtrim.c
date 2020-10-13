@@ -6,57 +6,61 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 16:02:00 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/12 16:22:22 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/10/13 14:59:39 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int  ft_isincharset(const char *set, char c)
+int			ft_getstart(const char *s1, const char *set)
 {
-    while (*set)
-    {
-        if (*set == c)
-            return (1);
-        set++;
-    }
-    return (0);
+	size_t	len;
+	size_t	i;
+
+	len = ft_strlen(s1);
+	i = 0;
+	while (i < len)
+	{
+		if (ft_strchr(set, s1[i]) == 0)
+			break ;
+		i++;
+	}
+	return (i);
 }
 
-static int  ft_getlen(const char *s1, const char *set)
+int			ft_getend(const char *s1, const char *set)
 {
-    unsigned int    i;
-    unsigned int    j;
+	size_t	len;
+	size_t	i;
 
-    i = 0;
-    while (ft_isincharset(set, s1[i]))
-        i++;
-    j = ft_strlen(s1) - 1;
-    while (ft_isincharset(set, s1[j]) && j > 0)
-        j--;
-    return (j - i + 1);
+	len = ft_strlen(s1);
+	i = 0;
+	while (i < len)
+	{
+		if (ft_strchr(set, s1[len - i - 1]) == 0)
+			break ;
+		i++;
+	}
+	return (len - i);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
-    unsigned int    len;
-    unsigned int    i;
-    char            *newstr;
+	int		start;
+	int		end;
+	char	*newstr;
 
-    if ((len = ft_getlen(s1, set)) <= 0)
-        len = 0;
-    newstr = (char *)malloc(sizeof(char) * (len + 1));
-    if (newstr == NULL)
-        return (NULL);
-    while (ft_isincharset(set, *s1))
-        s1++;
-    i = 0;
-    while (len > 0)
-    {
-        newstr[i] = s1[i];
-        i++;
-        len--;
-    }
-    newstr[i] = '\0';
-    return (newstr);
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
+	start = ft_getstart(s1, set);
+	end = ft_getend(s1, set);
+	if (start >= end)
+		return (ft_strdup(""));
+	newstr = (char *)malloc(sizeof(char) * (end - start + 1));
+	if (newstr == NULL)
+		return (NULL);
+	ft_strlcpy(newstr, s1 + start, end - start + 1);
+	return (newstr);
 }

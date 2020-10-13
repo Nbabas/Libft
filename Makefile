@@ -6,7 +6,7 @@
 #    By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/09 16:09:34 by nbascaul          #+#    #+#              #
-#    Updated: 2020/10/12 16:25:16 by nbascaul         ###   ########.fr        #
+#    Updated: 2020/10/13 15:55:55 by nbascaul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,24 +41,42 @@ SRC =	ft_atoi.c \
 		ft_substr.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
+		ft_split.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+
+SRC_BONUS =		ft_lstnew.c		\
+				ft_lstadd_front.c	\
+				ft_lstsize.c		\
+				ft_lstlast.c		\
+				ft_lstadd_back.c	\
+				ft_lstdelone.c	\
+				ft_lstclear.c		\
+				ft_lstiter.c		\
+				ft_lstmap.c		\
 
 
 		
 
 OBJ		= $(SRC:.c=.o)
-CMP		= gcc #llvm-gcc
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
+CC		= gcc
 FLAGS	= -Wall -Werror -Wextra 
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
-	@echo "\033[1;31;40m -------------- FINIIIII  GG. ---------------\033[0m"
-%.o: %.c
-	$(CMP) -I. -o $@ -c $? $(FLAGS)
 
-.PHONY: clean fclean re
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
+
+%.o: %.c
+	$(CC) -I. -o $@ -c $? $(FLAGS)
 
 clean:
 	rm -f $(OBJ)
@@ -67,3 +85,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all bonus clean fclean re
