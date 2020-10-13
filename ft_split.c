@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:02:51 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/12 18:39:23 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/10/13 17:19:26 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ char            **ft_split(char const *s, char c)
     size_t  wc;
     size_t  len;
     int     i;
-
+    if (!s)
+        return (NULL);
     wc = word_count(s, c);
     tstrs = (char **)malloc(sizeof(char*) * (wc + 1));
     if (!tstrs)

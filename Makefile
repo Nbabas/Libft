@@ -6,7 +6,7 @@
 #    By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/09 16:09:34 by nbascaul          #+#    #+#              #
-#    Updated: 2020/10/13 15:55:55 by nbascaul         ###   ########.fr        #
+#    Updated: 2020/10/13 17:04:53 by nbascaul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,16 +70,16 @@ FLAGS	= -Wall -Werror -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar rcs $@ $^
 
-bonus: $(OBJ) $(OBJ_BONUS)
-	ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
+bonus: $(OBJ_BONUS)
+	ar rcs $(NAME) $^
 
 %.o: %.c
 	$(CC) -I. -o $@ -c $? $(FLAGS)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
