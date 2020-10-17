@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/12 19:26:11 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/13 13:59:10 by nbascaul         ###   ########.fr       */
+/*   Created: 2020/10/09 14:58:40 by nbascaul          #+#    #+#             */
+/*   Updated: 2020/10/09 15:00:04 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	if (!s || fd < 0)
-		return ;
-	write(fd, s, ft_strlen(s));
-	write(fd, "\n", 1);
+	while (*s1 && *s2 && (*s1 == *s2))
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
 }

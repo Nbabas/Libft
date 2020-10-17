@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/12 19:26:11 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/13 13:59:10 by nbascaul         ###   ########.fr       */
+/*   Created: 2020/10/09 14:04:08 by nbascaul          #+#    #+#             */
+/*   Updated: 2020/10/09 14:07:15 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+char *ft_strncpy(char *dest, const char *src, size_t n)
 {
-	if (!s || fd < 0)
-		return ;
-	write(fd, s, ft_strlen(s));
-	write(fd, "\n", 1);
+	unsigned int	i;
+
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+		dest[i++] = '\0';
+	return (dest);
 }
