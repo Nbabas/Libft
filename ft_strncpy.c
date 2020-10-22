@@ -5,24 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/09 14:04:08 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 14:07:15 by nbascaul         ###   ########.fr       */
+/*   Created: 2020/10/21 13:42:41 by nbascaul          #+#    #+#             */
+/*   Updated: 2020/10/21 13:44:07 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
+	char			*res;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
 	while (i < n)
-		dest[i++] = '\0';
-	return (dest);
+	{
+		if (src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		else
+		{
+			while (i < n)
+			{
+				dest[i] = '\0';
+				i++;
+			}
+		}
+	}
+	res = dest;
+	return (res);
 }

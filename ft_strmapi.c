@@ -6,11 +6,15 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 14:51:48 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/13 17:19:27 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/10/22 20:52:28 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Apply the function (f) to any char of S. and return a new allocated str.
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
