@@ -53,6 +53,7 @@ SRC =	ft_atoi.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 		ft_itoa_base.c \
+		ft_lltoa.c \
 
 SRC_BONUS =		ft_lstnew.c		\
 				ft_lstadd_front.c	\
