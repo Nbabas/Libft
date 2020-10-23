@@ -6,11 +6,15 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 15:26:52 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/12 15:45:27 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/10/22 20:42:59 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
  #include "libft.h"
+
+/*
+**  Return an allocated str from start to len.
+*/
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {

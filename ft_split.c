@@ -6,11 +6,16 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:02:51 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/13 17:19:26 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/10/22 20:50:47 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+**  Return an allocated (malloc) array. char c is the seperator. 
+**  Array is null-byte terminated.
+*/
 
 static size_t   word_count(char const *s, char c)
 {

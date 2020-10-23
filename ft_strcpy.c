@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/09 15:22:27 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/22 20:35:01 by nbascaul         ###   ########.fr       */
+/*   Created: 2020/10/09 13:59:42 by nbascaul          #+#    #+#             */
+/*   Updated: 2020/10/09 14:03:51 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/*
-**	The bzero() function sets the first n bytes 
-**	of the area starting at s to zero (bytes containing aq\0aq).
-*/
-
-void	ft_bzero(void *s, size_t n)
+char *ft_strcpy(char *dest, const char *src)
 {
-	unsigned long	i;
-	unsigned char	*ptr;
-	
+	unsigned int i;
+
 	i = 0;
-	if (n <= 0)
-		return ;
-	ptr = (unsigned char *)s;
-	while (i < n)
-		ptr[i++] = '\0';
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
