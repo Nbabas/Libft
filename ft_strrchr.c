@@ -6,13 +6,13 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 14:31:51 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 16:17:51 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:28:10 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
@@ -25,4 +25,3 @@ char *ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
