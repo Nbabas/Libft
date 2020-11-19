@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 15:43:41 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 15:48:08 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 17:13:12 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned int	i;
-	unsigned char *pdest;
-	unsigned char *psrc;
+	unsigned char	*pdest;
+	unsigned char	*psrc;
 
 	i = 0;
 	pdest = (unsigned char *)dest;

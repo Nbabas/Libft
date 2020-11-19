@@ -6,13 +6,13 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:45:24 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 13:57:56 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:03:33 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	unsigned int	i;
 

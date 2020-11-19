@@ -6,7 +6,7 @@
 #    By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/09 16:09:34 by nbascaul          #+#    #+#              #
-#    Updated: 2020/10/23 13:08:43 by nbascaul         ###   ########.fr        #
+#    Updated: 2020/11/19 16:23:43 by nbascaul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ SRC_BONUS =		ft_lstnew.c		\
 
 OBJ		= $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
-CC		= gcc
+CC		= clang
 FLAGS	= -Wall -Werror -Wextra 
 
 all: $(NAME)

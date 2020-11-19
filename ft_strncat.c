@@ -6,13 +6,13 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 14:11:04 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 17:17:40 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:03:42 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncat(char *dest, const char *src, size_t n)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
 	unsigned int	i;
 	unsigned int	j;

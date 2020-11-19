@@ -6,18 +6,18 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 16:02:00 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/22 20:48:52 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:11:06 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	Return an allocated (malloc) copy of S without any char from set at 
+**	Return an allocated (malloc) copy of S without any char from set at
 **	beginning and at the end of S.
 */
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len_s;
 	char	*newstr;

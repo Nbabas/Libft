@@ -6,11 +6,11 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:24:10 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 13:31:52 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:11:50 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

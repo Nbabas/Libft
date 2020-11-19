@@ -6,14 +6,14 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 15:05:45 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/22 20:36:35 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:29:52 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	Atoi pass spaces char and the sign (one - or +). Return integer from str 
+**	Atoi pass spaces char and the sign (one - or +). Return integer from str
 */
 
 int	ft_atoi(const char *str)

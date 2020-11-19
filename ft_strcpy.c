@@ -6,11 +6,11 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:59:42 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 14:03:51 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:02:47 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dest, const char *src)
 {
 	unsigned int i;
 

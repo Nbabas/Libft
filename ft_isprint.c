@@ -6,11 +6,11 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:35:30 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 13:58:58 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 16:39:32 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c < 127)
 		return (1);

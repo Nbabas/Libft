@@ -6,11 +6,11 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:33:30 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/10 04:29:07 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:11:55 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	while (c >= 'a' && c <= 'z')
 	{

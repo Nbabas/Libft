@@ -6,13 +6,13 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 14:26:08 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/09 16:14:30 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 18:02:30 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	unsigned int	i;
 

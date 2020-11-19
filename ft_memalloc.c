@@ -6,15 +6,15 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/10 14:05:35 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/10/10 14:10:05 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/19 17:11:52 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void * ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
-	void *ptrmem;
+	void	*ptrmem;
 
 	ptrmem = malloc(size);
 	if (ptrmem == NULL)
@@ -24,5 +24,4 @@ void * ft_memalloc(size_t size)
 		ft_bzero(ptrmem, size);
 		return (ptrmem);
 	}
-
 }
