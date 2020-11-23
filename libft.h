@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/09 13:56:12 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/11/23 11:46:48 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/23 13:53:58 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void			*ft_memmove(void *dest, const void *src, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
-void			*ft_calloc(size_t count, size_t size);
+void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
