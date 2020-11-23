@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:02:51 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/11/23 10:45:33 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/23 11:41:04 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char			**ft_split(char const *s, char c)
 			s++;
 		len = ft_w_len(s, c);
 		if (!(tstrs[i] = (char*)malloc(sizeof(char) * len + 1)))
-			return ft_malloc_error(tstrs);
+			return (ft_malloc_error(tstrs));
 		ft_strlcpy(tstrs[i], s, len + 1);
 		s = s + len;
 		i++;
