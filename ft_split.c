@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:02:51 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/11/23 12:57:46 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/23 13:23:28 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,26 +41,27 @@ static size_t    ft_wordlen(char const *s, char c)
     return (len);
 }
 
-static int        ft_wordcount(char const *s, char c)
+static int        ft_wordcount(char const *str, char c)
 {
-    int        nb_word;
-    int        i;
+	int i;
+	int j;
+	int cmp;
+	int check;
 
-    i = 0;
-    nb_word = 0;
-    if (s[i] != c && s[i])
-        nb_word++;
-    while (s[i])
-    {
-        while (s[i] == c)
-        {
-            i++;
-            if (s[i] != c && s[i])
-                nb_word++;
-        }
-        i++;
-    }
-    return (nb_word);
+	cmp = 0;
+	check = 0;
+	j = 0;
+	i = 0;
+	while (str[i])
+	{
+		while (str[i] && str[i] == c)
+			i++;
+		if (str[i] && str[i] != c)
+			cmp++;
+		while (str[i] && str[i] != c)
+			i++;
+	}
+	return (cmp);
 }
 
 char            **ft_split(char const *s, char c)
