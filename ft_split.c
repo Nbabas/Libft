@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:02:51 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/11/23 13:23:28 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/23 13:34:46 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **  Array is null-byte terminated.
 */
 
-static char		**ft_malloc_error(char **tab)
+static char			**ft_malloc_error(char **tab)
 {
 	unsigned int	i;
 
@@ -31,22 +31,22 @@ static char		**ft_malloc_error(char **tab)
 	return (NULL);
 }
 
-static size_t    ft_wordlen(char const *s, char c)
+static size_t		ft_wordlen(char const *s, char c)
 {
-    size_t    len;
+	size_t			len;
 
-    len = 0;
-    while (s[len] != c && s[len] != '\0')
-        len++;
-    return (len);
+	len = 0;
+	while (s[len] != c && s[len] != '\0')
+		len++;
+	return (len);
 }
 
-static int        ft_wordcount(char const *str, char c)
+static int			ft_wordcount(char const *str, char c)
 {
-	int i;
-	int j;
-	int cmp;
-	int check;
+	int				i;
+	int				j;
+	int				cmp;
+	int				check;
 
 	cmp = 0;
 	check = 0;
@@ -64,31 +64,31 @@ static int        ft_wordcount(char const *str, char c)
 	return (cmp);
 }
 
-char            **ft_split(char const *s, char c)
+char				**ft_split(char const *s, char c)
 {
-    char    **tab;
-    int        nb_word;
-    size_t    wordlen;
-    int        j;
+	char		**tab;
+	int			nb_word;
+	size_t		wordlen;
+	int			j;
 
-    if (!s)
-        return (0);
-    nb_word = ft_wordcount(s, c);
-    if (!(tab = (char **)malloc(sizeof(char *) * (nb_word + 1))))
-        return (NULL);
-    j = 0;
-    while (nb_word--)
-    {
-        while (*s == c && *s)
-            s++;
-        wordlen = ft_wordlen(s, c);
+	if (!s)
+		return (0);
+	nb_word = ft_wordcount(s, c);
+	if (!(tab = (char **)malloc(sizeof(char *) * (nb_word + 1))))
+		return (NULL);
+	j = 0;
+	while (nb_word--)
+	{
+		while (*s == c && *s)
+			s++;
+		wordlen = ft_wordlen(s, c);
 		tab[j] = (char*)malloc(sizeof(char) * wordlen + 1);
 		if (!tab[j])
 			return (ft_malloc_error(tab));
-        ft_strlcpy(tab[j], s, wordlen + 1);
-        j++;
-        s += wordlen;
-    }
-    tab[j] = NULL;
-    return (tab);
+		ft_strlcpy(tab[j], s, wordlen + 1);
+		j++;
+		s += wordlen;
+	}
+	tab[j] = NULL;
+	return (tab);
 }
