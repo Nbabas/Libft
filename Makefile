@@ -6,11 +6,12 @@
 #    By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/09 16:09:34 by nbascaul          #+#    #+#              #
-#    Updated: 2020/11/23 11:02:31 by nbascaul         ###   ########.fr        #
+#    Updated: 2020/11/23 11:12:44 by nbascaul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
+
 
 SRC =	ft_atoi.c \
 		ft_bzero.c \
