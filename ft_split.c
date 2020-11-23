@@ -6,7 +6,7 @@
 /*   By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/12 18:02:51 by nbascaul          #+#    #+#             */
-/*   Updated: 2020/11/23 10:06:56 by nbascaul         ###   ########.fr       */
+/*   Updated: 2020/11/23 10:45:33 by nbascaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static size_t	ft_w_len(char const *s, char c)
 	return (len);
 }
 
-static char			**ft_malloc_error(char **tab)
+static char		**ft_malloc_error(char **tab)
 {
 	unsigned int	i;
 

@@ -6,7 +6,7 @@
 #    By: nbascaul <nbascaul@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/09 16:09:34 by nbascaul          #+#    #+#              #
-#    Updated: 2020/11/19 16:23:43 by nbascaul         ###   ########.fr        #
+#    Updated: 2020/11/23 11:02:31 by nbascaul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,8 +48,6 @@ SRC =	ft_atoi.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_itoa_base.c \
-		ft_lltoa.c \
 
 SRC_BONUS =		ft_lstnew.c		\
 				ft_lstadd_front.c	\
@@ -60,9 +58,6 @@ SRC_BONUS =		ft_lstnew.c		\
 				ft_lstclear.c		\
 				ft_lstiter.c		\
 				ft_lstmap.c		\
-
-
-		
 
 OBJ		= $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
